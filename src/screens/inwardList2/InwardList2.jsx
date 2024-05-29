@@ -68,7 +68,7 @@ const InwardList2 = () => {
                
                 <div className={classes.Grid2}>
                    
-               
+                    
                         <label>Instrument Type</label>
                         <input></input>
  
