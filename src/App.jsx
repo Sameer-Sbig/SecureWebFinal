@@ -29,6 +29,7 @@ function App() {
             <Route path="/inwardForm2" element={<InwardForm2/>}></Route>
             <Route path="/inwardList" element={<InwardList/>}></Route>
             <Route path="/inwardList2" element={<InwardList2></InwardList2>}></Route>
+            
           </Routes>
         </div>
       </div>
