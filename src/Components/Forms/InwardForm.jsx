@@ -6,7 +6,7 @@ import { IconButton } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddIcon from '@mui/icons-material/Add';
 import Add from "@mui/icons-material/Add";
-import { NavLink } from "react-router-dom";
+import { NavLink , useNavigate } from "react-router-dom";
 
 const InwardForm = () => {
   const [count, setCount] = useState(0);
@@ -19,13 +19,12 @@ const InwardForm = () => {
   const deleteDiv = () => {
     setCount(count - 1);
   };
+
+  const navigate = useNavigate();
+
   return (
     <>
       <div className={classes.main}>
-        <div className={classes.heading}>
-          <h1>Create New Inward</h1>
-        </div>
-        <div className={classes.mainFormDiv}>
           <div className={classes.form_div}>
             <form action="" className={classes.form}>
               <div className={classes.form_div1}>
@@ -199,13 +198,14 @@ const InwardForm = () => {
                     <label >Date of Birth</label>
                     <input type="date" />
                 </div> */}
-                <button type="button" className={classes.nextBtn}>
-                  <NavLink to='/inwardForm2'>Next</NavLink>
+                <button type="button" className={classes.nextBtn} onClick={() => {
+                  navigate('/inwardForm2');
+                }}>
+                  Next
                 </button>
               </div>
             </form>
           </div>
-        </div>
       </div>
     </>
   );

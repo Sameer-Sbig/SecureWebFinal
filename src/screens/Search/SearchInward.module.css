@@ -1,14 +1,15 @@
 
 .formFather{
- display: flex;
- justify-content: center;
+ /* display: flex;
+ justify-content: center; */
+ margin: 10px;
 }
 
 
 .SearchInwardMain{
     width: 100%;
     padding-inline: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

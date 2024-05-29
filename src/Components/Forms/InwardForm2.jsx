@@ -9,8 +9,8 @@ const InwardForm2 = () => {
     <>
       <div className={classes.main}>
         <div className={classes.form_div} style={{
-            marginTop:"20px",
-            width:"80%"
+            marginTop:"10px",
+            width:"100%"
         }}>
           <form action="" className={classes.form}>
             <div className={classes.form_div4}>

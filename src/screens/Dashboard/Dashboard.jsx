@@ -403,14 +403,15 @@ const DashBoard = () => {
         <Typography>
           <CustomTable page={page} setPage={setPage} columns={columns1} data={data1}></CustomTable>
         </Typography>
+        
       </CustomModal>
       <div className={classes.heading}>
 
 
         <h2>Inward Status Summary</h2>
-        <button ><NavLink to='/inwardForm'>
+        <button className={classes.newInwardBtn}><NavLink to='/inwardForm'>
 
-          Add New Inward
+          New Inward
         </NavLink>
           </button>
 

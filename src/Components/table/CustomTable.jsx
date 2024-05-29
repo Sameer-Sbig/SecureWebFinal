@@ -6,7 +6,7 @@ import { styled } from '@mui/material/styles';
 import { DeleteSharp } from '@mui/icons-material';
 
 const CustomTable = ({ specialActionClicked, deleteClicked, editClicked, actions, columns, data, page, setPage, usePagination = true, checkbox, selectedIds, setSelectedIds, fromMenu, cellClicked }) => {
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(4);
   const [orderBy, setOrderBy] = useState('');
   const [order, setOrder] = useState('asc');
   const [selectAll, setSelectAll] = useState(false);

@@ -11,20 +11,21 @@
 
 }
 
-.heading button{
-    height: 50px;
-    background-color: #81b0f5;
-    text-decoration: none;
-    border-radius: 10px;
+.newInwardBtn {
+    height: 40px;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 7px;
     color: white;
-    font-weight: bold;
+    background-color:#8c52ff;
+    cursor: pointer;
 }
 
-.heading button a {
+.newInwardBtn a {
     text-decoration: none;
-    color: inherit; /* Ensure the link text color matches the button text color */
-    display: block; /* Ensures the link fills the button area */
-    height: 100%; /* Ensures the link height matches the button height */
-    width: 100%; /* Ensures the link width matches the button width */
-    line-height: 50px; /* Centers the link text vertically */
+    color: white;
+}
+
+.newInwardBtn:hover {
+    background-color: #412678;
 }
