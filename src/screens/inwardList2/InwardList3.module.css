@@ -1,0 +1,49 @@
+
+
+.Table{
+    border: 0;
+    /* text-align: center; */
+    padding: 10px;
+   
+
+}
+
+.Table tr{
+    padding: 100px;
+}
+
+table {
+    box-shadow: none;
+}
+
+.InwardDetailsMain{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+button{
+    height: 40px;
+    width: 200px;
+    border: 1px solid;
+    border-radius: 7px;
+    color: white;
+    background-color:#8c52ff;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #412678;
+}
+.statusBtn{
+
+    grid-column: 2/3;
+    
+}
+
+.InstrumentDetails{
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+
+}

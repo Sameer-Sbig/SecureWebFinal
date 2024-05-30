@@ -39,8 +39,8 @@ const Header = () => {
                             placeholder="Search"
                             endAdornment={
                                 <InputAdornment position="end">
-                                    <IconButton aria-label="search" edge="end">
-                                        <SearchIcon />
+                                    <IconButton aria-label="search" edge="end" sx={{width:'15px' , marginRight:'10px'}}>
+                                        <SearchIcon/>
                                     </IconButton>
                                 </InputAdornment>
                             }
@@ -49,7 +49,7 @@ const Header = () => {
                 </div>
 
                 <div>
-                    <IconButton size="large">
+                    <IconButton size="large" sx={{width:'15px' , marginRight:'10px'}}>
                         <AccountCircleIcon fontSize="large" />
                     </IconButton>
                 </div>

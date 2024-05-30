@@ -2,47 +2,55 @@ import CustomTable from "../../Components/table/CustomTable";
 import React, { useState } from 'react';
 import classes from "./InwardList.module.css";
 import { useNavigate } from "react-router-dom";
+import CustomModal from "../../Components/Modal/CustomModal";
+import FullWidthTabs from "../inwardList2/InwardList3";
+
+//////
+
+
+
+//////////////
 
 const column = [
     {
-        label:"Proposal No",
-        id:"proposal_no"
+        label: "Proposal No",
+        id: "proposal_no"
     },
     {
-        label:"Inward Type",
-        id:"inward_type"
+        label: "Inward Type",
+        id: "inward_type"
     },
     {
-        label:"Instrument No",
-        id:"instrument_no"
+        label: "Instrument No",
+        id: "instrument_no"
     },
     {
-        label:"Product",
-        id:"product"
+        label: "Product",
+        id: "product"
     },
     {
-        label:"Customer Name",
-        id:"customer_name"
+        label: "Customer Name",
+        id: "customer_name"
     },
     {
-        label:"Premium",
-        id:"premium"
+        label: "Premium",
+        id: "premium"
     },
     {
-        label:"Debit Date",
-        id:"debit_date"
+        label: "Debit Date",
+        id: "debit_date"
     },
     {
-        label:"Policy Number",
-        id:"policy_no"
+        label: "Policy Number",
+        id: "policy_no"
     },
     {
-        label:"Policy Issued Date",
-        id:"policy_issued"
+        label: "Policy Issued Date",
+        id: "policy_issued"
     },
     {
-        label:"Status",
-        id:"status"
+        label: "Status",
+        id: "status"
     }
 ];
 
@@ -123,22 +131,40 @@ const data = [
 
 
 const InwardList = () => {
-    const navigate =useNavigate();
+    const navigate = useNavigate();
+    const [modalIsOpen, setModalIsOpen] = useState(false);
 
     const [page, setPage] = useState(0);
     const cellClicked = () => {
-        // setOpenModal(true);
-        navigate('/inwardList2');
-      };
+        setOpenModal(true);
+        setModalIsOpen(true)
+    };
+    const [openModal, setOpenModal] = useState(false);
+    const [value, setValue] = useState('one');
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
 
     return <>
+        <CustomModal
+            open={openModal}
+            onClose={() => setOpenModal(false)}
+            width={1200}
+            children={<FullWidthTabs/>}
+
+
+        />
 
         <div className={classes.tableOutline}>
             <div className={classes.heading}>
                 <h2>Inward List</h2>
             </div>
-            <CustomTable page={page} setPage={setPage} columns={column} data={data} cellClicked={cellClicked}></CustomTable>
+            <CustomTable isNavLink={true} page={page} setPage={setPage} columns={column} data={data} cellClicked={cellClicked}></CustomTable>
         </div>
+
+
 
     </>
 }
